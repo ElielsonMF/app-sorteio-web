@@ -3,7 +3,9 @@ import pandas as pd
 import random
 import io # Usado para criar o arquivo de download em memória
 
-# --- Funções de Lógica (Reutilizadas do script anterior) ---
+# --- Configuração da Entrada (Sidebar) ---
+st.sidebar.title("Configurações do Sorteio")
+st.sidebar.image("logo.jpeg", use_column_width=True)
 
 def realizar_sorteio_unico(lista_itens, numero_vencedores_x):
     """
@@ -151,4 +153,5 @@ if lista_original_y:
                 file_name="resultado_sorteio.xlsx",
                 mime="application/vnd.ms-excel",
                 use_container_width=True
+
             )
